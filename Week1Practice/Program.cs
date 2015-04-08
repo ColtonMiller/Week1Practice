@@ -172,6 +172,7 @@ namespace Week1Practice
             //FUNCTION CALL MADNESS!
             // 1. Call your SuperLoop function using the following parameters:
             //      startNum = Call RealMultiply with the parameters 1, 5
+            SuperLoop(RealMultiply(1,5) , TripleIt(myAge), TripleIt((myAge- 10)));
             //      endNum = Call TripleIt with the parameter myAge
             //      increment = Call TripleIt with the parameter of myAge minus 10
 
@@ -179,6 +180,7 @@ namespace Week1Practice
             //      startNum = Call RealMultiply with the parameters 1, and TripleIt with the parameter of 3.
             //      endNum = Call TripleIt with the parameter RealMultiply with the parameters: myAge, 7
             //      increment = Call TripleIt with the parameter of myAge minus RealMultiply with the parameters 2, 4.
+            SuperLoop(RealMultiply(1, TripleIt (3)), TripleIt(RealMultiply(myAge, 7)), TripleIt(myAge - RealMultiply(2,4)));
 
 
         }
