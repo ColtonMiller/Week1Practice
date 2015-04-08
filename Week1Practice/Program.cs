@@ -185,14 +185,30 @@ namespace Week1Practice
 
         
         //START -- FUNCTION DECLARATIONS 
+        /// <summary>
+        /// Multiply through return
+        /// </summary>
+        /// <param name="num1">first integer</param>
+        /// <param name="num2">second integer</param>
+        /// <returns>the two integers multiplied</returns>
         public static int RealMultiply(int num1, int num2) 
         {
             return num1 * num2;
         }
+        /// <summary>
+        /// get tripple the input
+        /// </summary>
+        /// <param name="number">enter integer</param>
+        /// <returns>triple the integer</returns>
         public static int TripleIt(int number)
         {
             return (number * 3);
         }
+        /// <summary>
+        /// The return greeting method that says hello
+        /// </summary>
+        /// <param name="name">insert name</param>
+        /// <returns>says hello to input</returns>
         public static string NewGreeting(string name)
         {
             return ("Hello, " + name);
