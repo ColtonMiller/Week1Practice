@@ -85,7 +85,7 @@ namespace Week1Practice
             }
             // 5. Create a while loop that prints out the numbers from 1 to 10 until it reaches one that is divisible by 4.
             int e = 1;
-            while (e <= 10)
+            while (e <= 4)
             {
                 Console.WriteLine(e);
                 
@@ -155,19 +155,20 @@ namespace Week1Practice
             //          EX: Console.WriteLine(FunctionCall("myParameter"));
             // 3. Using your NewGreeting function as the parameter for Console.WriteLine(), call your NewGreeting function using the parameter myName.
             Console.WriteLine(NewGreeting(myName));
-            Console.ReadKey();
             // 4. Create a function called "TripleIt" that takes one integer parameter called "number".  This function will return the number times 3.
             // 5. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of 10 to print out "10 tripled is <TripleIt Function Call>"
+            Console.WriteLine("10 tripled is " + TripleIt(10));
             // 6. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of myAge to print out "<myAge> tripled is <TripleIt Function Call>"
-
+            Console.WriteLine(myAge + " tripled is " + TripleIt(myAge));
             // 7. Create a function called "RealMultiply" that takes two integer parameters called "num1", and "num2".  This function will return the num1 * num2.
             // 8. Using your RealMultiply function as part of the parameter for Console.WriteLine(), 
             //      call your RealMultiply function using the parameter of 5 and 10 to print out the returned value from your function.
+            Console.WriteLine(RealMultiply(5, 10));
             // 9. Using your RealMultiply function as part of the parameter for Console.WriteLine(), 
             //      call your RealMultiply function using the parameter of 2 and myAge to print out the returned value from your function.
-
+            Console.WriteLine(RealMultiply(2, myAge));
             //FUNCTION CALL MADNESS!
             // 1. Call your SuperLoop function using the following parameters:
             //      startNum = Call RealMultiply with the parameters 1, 5
@@ -184,9 +185,17 @@ namespace Week1Practice
 
         
         //START -- FUNCTION DECLARATIONS 
-        public static void NewGreeting()
+        public static int RealMultiply(int num1, int num2) 
         {
-            Console.WriteLine("Hello ,");
+            return num1 * num2;
+        }
+        public static int TripleIt(int number)
+        {
+            return (number * 3);
+        }
+        public static string NewGreeting(string name)
+        {
+            return ("Hello, " + name);
         }
         /// <summary>
         /// Greets user or name
