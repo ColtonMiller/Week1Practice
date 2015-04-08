@@ -91,33 +91,53 @@ namespace Week1Practice
                 
                 e += 1;
             }
-            Console.ReadKey();
+
             // PUTTING IT TOGETHER
             // Use either FOR or WHILE loops to accomplish the following:
             // 1. Print out the number of letters in your name using the format: "My name, <myName>, has <number of letters> in it."
+            int nameLength = 1;
+            while (nameLength < myName.Length)
+            {
+                nameLength ++;
+            }
+            Console.WriteLine("My name, " + myName + ", has " + nameLength  + " letters in it."); 
             // 2. Print out the number of items in your list using the format: "My product list has <number of items> in it."
+            int numItems = 0;
+            while (numItems < productsList.Count)
+            {
+                numItems++;
+            }
+            Console.WriteLine("My product list has " + numItems + " items in it.");
             // 3. Print out the number of letters of each item in productsList using the format: "<product> has <number of letters> in it."
-
+            for (int i = 0; i < productsList.Count; i++)
+            {
+                Console.WriteLine(productsList[i] + " has " + productsList[i].Length + " letters in it");
+            }
             // DECLARING AND CALLING FUNCTIONS
             // 1. Create a function called "Greeting" that takes one string parameter called "name".  This function will print "Hello <name>"
             // 2. Call the Greeting function by passing in "Geronimo Jackson" as your parameter.
+            Greeter("Geronimo Jackson");
             // 3. Call the Greeting function by passing in myName as your parameter.
-             
+            Greeter(myName);
             // 4. Create a function called "DoubleIt" that takes one integer parameter called "number".  This function will print "<number> doubled is <number * 2>"
             // 5. Call your DoubleIt Function by passing in 1337 as your parameter.jjjjjj
+            DoubleIt(1337);
             // 6. Call your DoubleIt function by passing in myAge as your parameter.
-
+            DoubleIt(myAge);
             // 7. Create a function called "Multiply" that takes two integer parameters called "num1" and "num2".  This function will print "<num1> times <num2> is <num1 * num2>"
             // 8. Call your Multiply function by passing in 2 and 8 as your parameters.
+            Multiply(2, 8);
             // 9. Call your Multiply function by passing in 3 and myAge as your parameters.
-
+            Multiply(3, myAge);
             // 10. Create a function called "LoopThis" that takes two integer parameters called "startNum" and "endNum".  
             //      This function will print out: 
             //          a. "I'm looping from <startNum> to <endNum>."  
             //          b. The numbers from startNum to endNum, one per line.
             // 11. Call your LoopThis function by passing in 20 and 30 as your parameters.
+            LoopThis(20, 30);
             // 12. Call your LoopThis function by passing in 0 and myAge as your parameters.
-
+            LoopThis(0, myAge);
+            Console.ReadKey();
             // 13. Create a function called "SuperLoop" that takes three integer parameters called "startNum", "endNum", and "increment".  
             //      You will need to track how many times the loop has been executed in a variable called "loopCount".
             //      This function will print out: 
@@ -159,9 +179,51 @@ namespace Week1Practice
 
         }
 
+        
         //START -- FUNCTION DECLARATIONS 
-
+        /// <summary>
+        /// Greets user or name
+        /// </summary>
+        /// <param name="name">a name of a person.</param>
+        public static void Greeter(string name)
+        {
+            Console.WriteLine("Hello " + name);
+        }
+        /// <summary>
+        /// Doubles an integer
+        /// </summary>
+        /// <param name="number">enter integer</param>
+        public static void DoubleIt(int number)
+        {
+            Console.WriteLine(number * 2);
+        }
+        /// <summary>
+        /// Multiplies two integers
+        /// </summary>
+        /// <param name="num1">fitst number</param>
+        /// <param name="num2">second number</param>
+        public static void Multiply(int num1, int num2)
+        {
+            Console.WriteLine(num1 * num2);
+        }
+        /// <summary>
+        /// Tells the number being looped and loops the two integers
+        /// </summary>
+        /// <param name="startNum">starting number</param>
+        /// <param name="endNum">ending number</param>
+        
+        public static void LoopThis(int startNum, int endNum)
+        {
+            Console.WriteLine("I'm looping from " + startNum + " to " + endNum);
+            while (startNum <= endNum)
+            {
+                Console.WriteLine(startNum);
+                startNum++;
+            }
+        }
+        
         //Example function declaration
+        
         static void MyFunction(string myParameter)
         {
             //Code block
