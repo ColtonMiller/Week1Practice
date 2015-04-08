@@ -12,29 +12,86 @@ namespace Week1Practice
         {
             // DECLARING VARIABLES
             // 1. Declare a string variable called "myName" and set it equal to your name
+            string myName = "Colton";
             // 2. Declare a number varible called "myAge" and set it equal to your age
+            int myAge = 20;
             // 3. Declare a boolean value called "myBool" and set it equal to true or false;
+            bool myBool = true;
             // 4. Declare a new list of strings called "productsList" and set it equal to "basketball", "baseball glove", "tennis shoes", "hockey puck"
+            List<string> productsList = new List<string> { "basketball", "baseball glove", "tennis shoes", "hockey puck" };
 
             // PRINTING VARIABLES TO THE CONSOLE USING CONSOLE.WRITELINE()
             // 1. Print your name to the console using the format: "My name is <myName> and I'm a beast of a programmer"
+            Console.WriteLine("My name is " + myName + "and I'm a beast of a programmer");
             // 2. Print out your age to the console using the format: "I am <myAge> years awesome."
+            Console.WriteLine("I am " + myAge + " years awesome.");
             // 3. Print out your boolean value using the format: "I set my boolean value equal to <myBool>"
+            Console.WriteLine("I set my boolean value equal to " + myBool);
             // 4. Using a For loop, print out each value in productsList.
-
+            for (int i = 0; i < productsList.Count; i++)
+            {
+                    Console.WriteLine(productsList[i]);
+            }
             // FOR LOOP PRACTICE
             // 1. Create a for loop that prints out the numbers 1 to 10.
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(i);  
+            }
             // 2. Create a for loop that prints out the numbers 10 to 1.
+            for (int i = 10; i >= 1; i--)
+            {
+                Console.WriteLine(i);   
+            }
             // 3. Create a for loop that prints out the numbers 10 to 30, only printing the even numbers
+            for (int i = 10; i <= 30; i += 2)
+            {
+                Console.WriteLine(i);                
+            }
             // 4. Create a for loop that prints out the numbers 100 to 75, only printing every 5th number (100, 95, 90, 85, 80, 75)
-
+            for (int i = 100; i >= 75; i -=5) 
+            {
+                Console.WriteLine(i);
+            }
             // WHILE LOOP PRACTICE
             // 1. Create a while loop that prints out the numbers from 1 to 10.
+            int a = 1;
+            while (a <= 10)
+            {
+                Console.WriteLine(a);
+                a += 1;
+            }
             // 2. Create a while loop that prints out the numbers from 10 to 1.
+            int b = 10;
+            while (b >= 1)
+            {
+                Console.WriteLine(b);
+                b -= 1;
+            }
             // 3. Create a while loop that prints out the numbers from 15 to 30, only printing the even numbers
-            // 4. Create a while loop that prints out the numbers from 100 to 75, only printing every 5th number (100, 95, 90, 85, 80, 75)
-            // 5. Create a while loop that prints out the numbers from 1 to 10 until it reaches one that is divisible by 4.
+            int c = 16;
+            while (c <= 30)
+            {
+                Console.WriteLine(c);
+                c += 2;
+            }
 
+            // 4. Create a while loop that prints out the numbers from 100 to 75, only printing every 5th number (100, 95, 90, 85, 80, 75)
+            int d = 100;
+            while (d >= 75)
+            {
+                Console.WriteLine(d);
+                d -= 5;
+            }
+            // 5. Create a while loop that prints out the numbers from 1 to 10 until it reaches one that is divisible by 4.
+            int e = 1;
+            while (e <= 10)
+            {
+                Console.WriteLine(e);
+                
+                e += 1;
+            }
+            Console.ReadKey();
             // PUTTING IT TOGETHER
             // Use either FOR or WHILE loops to accomplish the following:
             // 1. Print out the number of letters in your name using the format: "My name, <myName>, has <number of letters> in it."
@@ -47,7 +104,7 @@ namespace Week1Practice
             // 3. Call the Greeting function by passing in myName as your parameter.
              
             // 4. Create a function called "DoubleIt" that takes one integer parameter called "number".  This function will print "<number> doubled is <number * 2>"
-            // 5. Call your DoubleIt Function by passing in 1337 as your parameter.
+            // 5. Call your DoubleIt Function by passing in 1337 as your parameter.jjjjjj
             // 6. Call your DoubleIt function by passing in myAge as your parameter.
 
             // 7. Create a function called "Multiply" that takes two integer parameters called "num1" and "num2".  This function will print "<num1> times <num2> is <num1 * num2>"
