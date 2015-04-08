@@ -137,7 +137,6 @@ namespace Week1Practice
             LoopThis(20, 30);
             // 12. Call your LoopThis function by passing in 0 and myAge as your parameters.
             LoopThis(0, myAge);
-            Console.ReadKey();
             // 13. Create a function called "SuperLoop" that takes three integer parameters called "startNum", "endNum", and "increment".  
             //      You will need to track how many times the loop has been executed in a variable called "loopCount".
             //      This function will print out: 
@@ -145,14 +144,18 @@ namespace Week1Practice
             //          b. The numbers from startNum to endNum, one per line.
             //          c. "That loop was craaaaaazy, we looped X times"
             // 14. Call your SuperLoop function by passing in 0, 100, and 15 as your parameters.
+            SuperLoop(0, 100, 15);
             // 15. Call your SuperLoop function by passing in 0, 200, and myAge as your parameters.
+            SuperLoop(0, 200, myAge);
 
             //DECLARING AND CALLING RETURN FUNCTIONS
             // 1. Create a function called "NewGreeting" that takes one string parameter called "name".  This function will return a string in the format of "Hello, <name>"
             // 2. Using your NewGreeting function as the parameter for Console.WriteLine(), call your NewGreeting function using the parameter "Neil deGrasse-Tyson"
+            Console.WriteLine(NewGreeting("Neil deGrasse-Tyson"));
             //          EX: Console.WriteLine(FunctionCall("myParameter"));
             // 3. Using your NewGreeting function as the parameter for Console.WriteLine(), call your NewGreeting function using the parameter myName.
-            
+            Console.WriteLine(NewGreeting(myName));
+            Console.ReadKey();
             // 4. Create a function called "TripleIt" that takes one integer parameter called "number".  This function will return the number times 3.
             // 5. Using your TripleIt function as part of the parameter for Console.WriteLine(), 
             //      call your TripleIt function using the parameter of 10 to print out "10 tripled is <TripleIt Function Call>"
@@ -181,6 +184,10 @@ namespace Week1Practice
 
         
         //START -- FUNCTION DECLARATIONS 
+        public static void NewGreeting()
+        {
+            Console.WriteLine("Hello ,");
+        }
         /// <summary>
         /// Greets user or name
         /// </summary>
@@ -206,6 +213,24 @@ namespace Week1Practice
         {
             Console.WriteLine(num1 * num2);
         }
+       /// <summary>
+       /// Sets a loop with an increment modifier
+       /// </summary>
+       /// <param name="startNum">start number</param>
+       /// <param name="endNum">end number</param>
+       /// <param name="increment">inrementation</param>
+        public static void SuperLoop(int startNum, int endNum, int increment)
+        {
+           int loopCount = 0;
+            Console.WriteLine("I'm looping from "+ startNum +" to "+ endNum + ", incrementing " + increment + " each time");
+            while (startNum <= endNum) 
+            {
+                Console.WriteLine(startNum += increment);
+                loopCount++;
+            }
+            Console.WriteLine("That loop was craaaaaazy, we looped " + loopCount + " times");
+        }
+        
         /// <summary>
         /// Tells the number being looped and loops the two integers
         /// </summary>
